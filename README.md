@@ -1,0 +1,1 @@
+# Sessio 1: Creació tots els ***fitxer/documents***
