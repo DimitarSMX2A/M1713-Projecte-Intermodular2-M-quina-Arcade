@@ -12,14 +12,16 @@ from jocs import janken
 
 # Menú principal i el bucle de l'aplicació
 
-#if __name__ : "__main__"
-#def menu():
 flag = 1
+    
 while flag == 1:
-            print ("---BENVINGUT/DA AL MINI ARCADE")
+            print ("    BENVINGUT/DA AL MINI ARCADE"    )
+            print ("")
             print ("1 -> Jugar a Pedra, Paper o Tisora")
             print ("2 -> Jugar a Endevinar Número")
             print ("S -> Sortir")
+            print ("")
+            sleep(2)
 
             opcio = input("A QUIN JOC VOLS JUGAR?: ")
             opcio = opcio.upper()
