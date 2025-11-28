@@ -15,13 +15,13 @@ from jocs import janken
 flag = 1
     
 while flag == 1:
-            print ("    BENVINGUT/DA AL MINI ARCADE"    )
+            print ("- - - BENVINGUT/DA AL MINI ARCADE- - -"    )
             print ("")
             print ("1 -> Jugar a Pedra, Paper o Tisora")
             print ("2 -> Jugar a Endevinar Número")
             print ("S -> Sortir")
             print ("")
-            sleep(2)
+            sleep(1)
 
             opcio = input("A QUIN JOC VOLS JUGAR?: ")
             opcio = opcio.upper()
