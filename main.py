@@ -1,7 +1,7 @@
 # Llibreries 
 from time import sleep
 from jocs import janken
-
+from jocs import nana
 
 # Variables
 
@@ -10,10 +10,10 @@ from jocs import janken
 
 
 
-# Menú principal i el bucle de l'aplicació
+# MENU DEL ARCADE
 
 flag = 1
-    
+   
 while flag == 1:
             print ("- - - BENVINGUT/DA AL MINI ARCADE- - -"    )
             print ("")
@@ -30,10 +30,14 @@ while flag == 1:
                 case "1":
                     janken()
                 case "2":
-                    print
+                    nana()
                 case "S":
+                    print("")
                     print("GRÀCIES PER JUGAR, FINS LA PRÒXIMA!")
+                    print("")
                     flag = 0
                 case _:
+                    print("")
                     print("NO ESCRIGUIS CAP ALTRA OPCIÓ QUE NO SIGUI 1, 2 O S")
+                    print("")
             sleep(2)

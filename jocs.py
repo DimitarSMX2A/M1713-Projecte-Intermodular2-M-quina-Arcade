@@ -4,6 +4,7 @@
 
 from time import sleep
 from robot import robot
+import random
 
 # Variables
 
@@ -56,7 +57,8 @@ def janken():
 # ENTRADA USUARI
         op_jugador = input("PEDRA, PAPER O TISORA? O SORTIR --> S: ")
         op_jugador = op_jugador.upper()
-       
+
+# CONTROL D'ERROR       
         if (op_jugador == "PEDRA") | (op_jugador == "PAPER") | (op_jugador == "TISORA"):
 
 # ENTRADA ROBOT       
@@ -139,5 +141,49 @@ def janken():
             else:
                 print ("EMPAT")
 
-# GUANYADOR DEFINITIU
-    
+
+def nana():
+# CRIDEM QUE EL "ROBOT" ENS DONI UN NUMERO ENTRE 1 I 100
+    num_random = random.randint(1,100)
+    num_intents = 0
+
+    print("")
+    print("   INTENTA ENDEVINAR EL NUMERO ENTRE '1' I '100'   ")
+    print("")
+    sleep(1)
+   
+    f = 1
+   
+    while f == 1:
+        
+# DEMANEM QUE EL JUGADOR POSE UN NUMERO
+        try:
+            num_jugador = int(input("INTRODUIEX UN NUMERO: "))
+            num_intents += 1
+
+# CONDICIONS DE LA JUGADA
+            if num_jugador < num_random:
+                print("")
+                print("MASSA BAIX")
+                print("")
+
+
+            elif num_jugador > num_random:
+                print("")
+                print("MASSA ALT")
+                print("")
+
+# RESULTAT FINAL, ENS DONA EL NOMBRE DE INTENTS FETS      
+            elif num_jugador == num_random:
+                print("")
+                print(f"CORRECTE, HAS ENCERTAT EL NUMERO EN {num_intents} INTENS")
+                print ("")
+                f = 0
+                sleep(1)
+
+# CONTROL D'ERRORS        
+        except ValueError:
+                    print("")
+                    print("   SI US PLAU, INTRODUEIX UN NUMERO ENTRE 1 I 100   ")
+                    print("")
+                    sleep(1)
